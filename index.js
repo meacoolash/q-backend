@@ -10,7 +10,7 @@ async function main() {
   dotenv.config()
 
   const client = new mongodb.MongoClient(process.env.DB_URI)
-  const port = process.env.PORT
+  const port = process.env.PORT || 3000
   const url = process.env.URL
 
   console.log(process.env.DB_URI)
