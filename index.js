@@ -13,6 +13,9 @@ async function main() {
   const port = process.env.PORT
   const url = process.env.URL
 
+  console.log(process.env.DB_URI)
+  console.log(url)
+
   try {
     await client.connect()
     await ContactsDAO.injectDB(client)
